@@ -14,7 +14,7 @@ def getFileExtension(filePath:str):
 
 def makeFolder(basePath:str):
 
-    folderName = ["Organized Images","Organized Videos","Organized audio","Organized Documents"]
+    folderName = ["Organized Images","Organized Videos","Organized audio","Organized Documents","Organized Others"]
     folderPath = [ os.path.join(basePath, name) for name in folderName]
     
     for folder in folderPath:
@@ -26,11 +26,9 @@ def makeFolder(basePath:str):
     organizeVideos(basePath=basePath,destinationPath=folderPath[1])
     organizeAudio(basePath=basePath,destinationPath=folderPath[2])
     organizeDocments(basePath=basePath,destinationPath=folderPath[3])
+    organizeRemainingFiles(basePath=basePath,destinationPath=folderPath[4])
     
-    # image= os.path.join(basePath,)
-    # video = os.path.join(basePath,)
-    # audio = os.path.join(basePath,)
-    # documents = os.path.join(basePath,)
+
 
 def organizeImages(basePath:str,destinationPath):
     for i in os.scandir(basePath):
@@ -73,6 +71,16 @@ def organizeAudio(basePath:str,destinationPath):
                 except:
                     pass
     print("Audio Moved")
+
+def organizeRemainingFiles(basePath:str,destinationPath):
+    for i in os.scandir(basePath):
+        if (i.is_file()):
+            try:
+                shutil.move(i.path,destinationPath)
+            except:
+                pass
+               
+    print("Folder Cleared")
 
 
 userInputPath = input("Please enter the path to Organize ")
