@@ -8,9 +8,11 @@ The script typically scans the ***target folder*** and identifies files based on
 
 Usage Tutorial
 
-<video controls>
-  <source src="video/FolderOrganizer.mp4" type="video/mp4">
-</video>
+
+
+
+
+https://user-images.githubusercontent.com/119127289/233695981-052b47a9-89d9-4a58-aea4-fa8d5c8efa64.mp4
 
 
 
@@ -29,6 +31,5 @@ https://www.python.org/
 See the magic 😼
 
 If you like the script please give it a star and feel free to contribute and help the community.
-
 
 
